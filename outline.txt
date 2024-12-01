@@ -1,0 +1,26 @@
+Name ideas: file_step_system, file_syster
+
+This is a plan for how the file system will interact with the terminal
+
+=======================================================================
+
+messaging
+
+will use indirect asymmetrical messaging: cmd will send to filesys by PID, then filesys will send back  
+
+the file system program will always display the current state by passing back to the command line
+
+start program:
+    -display starting interface <- whatever we want!
+        -this will be done by creating the interface (what data structure??) (char**??)
+        -then pass this back to the command line
+
+user inputs file system command:
+
+
+
+
+
+In the command program
+=====================
+    -have a function that outputs file system outputs
