@@ -5,24 +5,24 @@
 
 //arg[0] = filepath (not to use here), arg[n...] = real args
 int main(int argc, char *argv[]) {
-    printf("This is filesyster!\n");
-    fflush(stdout);
+    // printf("This is filesyster!\n");
+    // fflush(stdout);
 
-    File_tree* file_tree = create_tree();
-    printf("%s\n", file_tree->root->name);
+    // File_tree* file_tree = create_tree();
+    // printf("%s\n", file_tree->root->name);
+    // fflush(stdout);
 
     while(1) {
         char input_buffer[120];
 
         //get user input
         fgets(input_buffer, sizeof(input_buffer), stdin);
-        // if (fgets(input_buffer, sizeof(input_buffer), stdin) == NULL) {
-        //     perror("fgets failed or stdin closed");
-        //     break;  // Exit the loop if stdin is closed
-        // }
 
         //set ending newline to null terminator
         input_buffer[strcspn(input_buffer, "\n")] = '\0';
+        if(strcmp(input_buffer, "exit") == 0) {
+            break;
+        }
 
         printf("\nfile syster recieved input!: %s\n", input_buffer);
         fflush(stdout);
